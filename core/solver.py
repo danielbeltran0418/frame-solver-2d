@@ -7,8 +7,8 @@ from typing import Dict, List, Tuple
 
 import numpy as np
 
-from frame_solver.core.element import Element
-from frame_solver.core.node import Node
+from core.element import Element
+from core.node import Node
 
 
 # Cada nodo tiene 3 GDL: u (X), v (Y), theta (rotación).

@@ -6,13 +6,18 @@ empotrado en ambas bases, con cargas horizontales y verticales.
 """
 
 import math
+import os
+import sys
 
 import numpy as np
 import pytest
 
-from frame_solver.core.element import Element
-from frame_solver.core.node import Node
-from frame_solver.core.solver import Frame2DSolver
+# Agrega la raíz del repo a sys.path para que `from core.*` funcione.
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from core.element import Element
+from core.node import Node
+from core.solver import Frame2DSolver
 
 
 # ----------------------------------------------------------------------

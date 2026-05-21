@@ -7,7 +7,7 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from frame_solver.core.node import Node
+from core.node import Node
 
 
 @dataclass

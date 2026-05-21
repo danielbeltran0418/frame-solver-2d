@@ -2,7 +2,7 @@
 Interfaz Streamlit para el análisis de pórticos 2D.
 
 Ejecución:
-    streamlit run frame_solver/ui/app.py
+    streamlit run ui/app.py
 """
 
 from __future__ import annotations
@@ -10,8 +10,9 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-# Permite ejecutar `streamlit run frame_solver/ui/app.py` desde la raíz del repo.
-ROOT = Path(__file__).resolve().parents[2]
+# Agrega la raíz del repo a sys.path para que los imports `core.*` funcionen
+# tanto local como en Streamlit Cloud.
+ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
@@ -20,9 +21,9 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-from frame_solver.core.element import Element
-from frame_solver.core.node import Node
-from frame_solver.core.solver import Frame2DSolver
+from core.element import Element
+from core.node import Node
+from core.solver import Frame2DSolver
 
 
 # ----------------------------------------------------------------------
